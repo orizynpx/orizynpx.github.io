@@ -1,0 +1,51 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { Image } from "astro:assets";
+import orchidWeapons from "../assets/orchid-weapons.png";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <Header />
+    <main class="text-black dark:text-white p-4">
+      <h1 class="text-center text-3xl font-extrabold hover:text-blue-200">Hello, World!</h1>
+      <p>
+        Welcome to my website where I will showcase my projects, especially
+        pixel artwork as well as games, and write stuff as blog posts.
+      </p>
+
+      <p>This website is made with Astro.</p>
+
+      <h2 class="text-xl font-bold">Projects</h2>
+
+      <ul class="sm:grid sm:grid-cols-2">
+        <li>
+          <a href="https://wasakagames.itch.io/a-match-made-in-dungeon"
+            >A Match Made in Dungeon</a
+          >
+        </li>
+
+        <li><a href="https://wasakagames.itch.io/rhythm-qubert">R*bert</a></li>
+
+        <li><a href="https://github.com/orizynpx/nodepad">Nodepad</a></li>
+
+        <li>
+          <a href="https://wasakagames.itch.io/personal-space">Personal Space</a
+          >
+        </li>
+      </ul>
+
+	  <h2 class="text-xl font-bold">Gallery</h2>
+
+	  <Image src={orchidWeapons} alt="Orchid Weapons" class="w-full sm:w-fit" />
+    </main>
+    <Footer />
+  </body>
+</html>
